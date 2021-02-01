@@ -51,13 +51,12 @@ bot.on('message', function (event) {
             }
           });
           break;
-         case 'よくある質問を見る':
+        case 'よくある質問を見る':
           event.reply({
             type: 'template',
             altText: 'this is a buttons template',
             template: {
               type: 'carousel',
-              text: 'お客様のご質問にお答えします。下のメニューよりご希望の内容をタップしてください。',
               columns: [
               {
                 title: '貸出の延長はできますか？',
