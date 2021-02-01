@@ -13,6 +13,25 @@ bot.on('message', function (event) {
   switch (event.message.type) {
     case 'text':
       switch (event.message.text) {
+        case '資料検索':
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'buttons',
+              text: '検索の種類を選択してください?',
+              actions: [{
+                type: 'uri',
+                label: '簡単検索',
+                uri: 'https://line.me/ja/'
+              }, {
+                type: 'uri',
+                label: '詳細検索',
+                uri: 'https://line.me/ja/'
+              }]
+            }
+          });
+          break;
         case 'Me':
           event.source.profile().then(function (profile) {
             return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
