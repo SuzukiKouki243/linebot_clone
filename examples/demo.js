@@ -151,7 +151,7 @@ bot.on('message', function (event) {
                   label: "詳細を見る",
                   uri: "https://line.me/ja/"
                  }]
-               },
+               }
               ]
              }
             });
@@ -189,7 +189,7 @@ bot.on('message', function (event) {
                   label: "詳細を見る",
                   uri: "https://line.me/ja/"
                  }]
-               },
+               }
               ]
              }
             });
