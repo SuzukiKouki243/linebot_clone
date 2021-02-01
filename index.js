@@ -1,2 +1,2 @@
 console.log("inde.js in");
-module.exports = require('./lib/linebot');
+module.exports = require('./examples/demo');
