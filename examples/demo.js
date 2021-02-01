@@ -113,7 +113,7 @@ bot.on('message', function (event) {
                   label: "選択",
                   text: "施設に関する質問"
                  }]
-               },
+               }
               ]
              }
             });
