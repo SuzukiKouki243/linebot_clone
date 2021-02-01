@@ -89,6 +89,35 @@ bot.on('message', function (event) {
              }
             });
           break;
+          case 'カテゴリから検索する':
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'carousel',
+              columns: [
+              {
+                title: '貸出に関するご質問',
+                text: '貸出に関する質問［3件］',
+                actions:[{
+                  type: "message",
+                  label: "貸出に関する質問",
+                  text: "貸出に関する質問"
+                 }]
+               },
+               {
+                title: '施設に関するご質問',
+                text: '施設に関する質問［3件］',
+                actions:[{
+                  type: "message",
+                  label: "施設に関する質問",
+                  text: "施設に関する質問"
+                 }]
+               },
+              ]
+             }
+            });
+          break;
         case 'Me':
           event.source.profile().then(function (profile) {
             return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
