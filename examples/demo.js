@@ -156,7 +156,7 @@ bot.on('message', function (event) {
              }
             });
           break;
-       case '施設に関する質問':
+          case '施設に関する質問':
           event.reply({
             type: 'template',
             altText: 'this is a buttons template',
