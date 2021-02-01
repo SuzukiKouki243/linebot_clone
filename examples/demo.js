@@ -51,6 +51,45 @@ bot.on('message', function (event) {
             }
           });
           break;
+         case 'よくある質問を見る':
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'carousel',
+              text: 'お客様のご質問にお答えします。下のメニューよりご希望の内容をタップしてください。',
+              columns: [
+              {
+                title: '貸出の延長はできますか？',
+                text: '返却日までに利用が終わらない場合は、１回に限り返却期限を延長できます。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+               {
+                title: '資料のコピーはできますか？',
+                text: '館内の資料に限りコピーできます。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+               {
+                title: '返却の方法は？',
+                text: 'お返しになる資料を返却カウンターにお持ちください。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+              ]
+             }
+            });
+          break;
         case 'Me':
           event.source.profile().then(function (profile) {
             return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
