@@ -89,7 +89,7 @@ bot.on('message', function (event) {
              }
             });
           break;
-          case 'カテゴリから検索する':
+         case 'カテゴリから検索する':
           event.reply({
             type: 'template',
             altText: 'this is a buttons template',
@@ -101,7 +101,8 @@ bot.on('message', function (event) {
                 text: '貸出に関する質問［3件］',
                 actions:[{
                   type: "message",
-                  label: "選択"
+                  label: "選択",
+                  text: "貸出に関する質問"
                  }]
                },
                {
@@ -109,7 +110,8 @@ bot.on('message', function (event) {
                 text: '施設に関する質問［3件］',
                 actions:[{
                   type: "message",
-                  label: "選択"
+                  label: "選択",
+                  text: "施設に関する質問"
                  }]
                },
               ]
