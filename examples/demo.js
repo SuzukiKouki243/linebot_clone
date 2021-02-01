@@ -118,6 +118,82 @@ bot.on('message', function (event) {
              }
             });
           break;
+          case '貸出に関する質問':
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'carousel',
+              columns: [
+              {
+                title: '貸出の延長はできますか？',
+                text: '返却日までに利用が終わらない場合は、１回に限り返却期限を延長できます。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+               {
+                title: '貸出に上限がありますか？',
+                text: '図書・雑誌・紙芝居は1人10冊まで、2週間借りられます。CD・DVDは1人3点まで、1週間借りられます。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+               {
+                title: '貸出できる期間は？',
+                text: '図書・雑誌・紙芝居は2週間、CD・DVDは1週間です。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+              ]
+             }
+            });
+          break;
+       case '施設に関する質問':
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'carousel',
+              columns: [
+              {
+                title: '自習室はありますか？',
+                text: '自習室は中央図書館と東図書館、西図書館にあります。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+               {
+                title: '会議室や視聴覚室の利用はできますか？',
+                text: '中央図書館には、読書会・文庫など図書館活動に係わるグループや団体がご利用いただける視聴覚室、展示集会室、和室があります。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+               {
+                title: '障害者向けのサービスはありますか？',
+                text: '図書館に来られない方のために、郵送による貸出制度があります。また、点字図書・録音図書・布絵本・大活字本の貸出も行っています。',
+                actions:[{
+                  type: "uri",
+                  label: "詳細を見る",
+                  uri: "https://line.me/ja/"
+                 }]
+               },
+              ]
+             }
+            });
+          break;
         case 'Me':
           event.source.profile().then(function (profile) {
             return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
