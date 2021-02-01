@@ -19,15 +19,15 @@ bot.on('message', function (event) {
             altText: 'this is a buttons template',
             template: {
               type: 'buttons',
-              text: '検索の種類を選択してください?',
+              text: '検索の種類を選択して下さい',
               actions: [{
                 type: 'uri',
                 label: '簡単検索',
-                uri: 'https://line.me/ja/'
+                uri: 'https://www.lics-saas.nexs-service.jp/licsdemo/spopac/index.do'
               }, {
                 type: 'uri',
                 label: '詳細検索',
-                uri: 'https://line.me/ja/'
+                uri: 'https://www.lics-saas.nexs-service.jp/licsdemo/spopac/searchexpert.do'
               }]
             }
           });
