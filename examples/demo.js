@@ -101,8 +101,7 @@ bot.on('message', function (event) {
                 text: '貸出に関する質問［3件］',
                 actions:[{
                   type: "message",
-                  label: "貸出に関する質問",
-                  text: "貸出に関する質問"
+                  label: "選択"
                  }]
                },
                {
@@ -110,8 +109,7 @@ bot.on('message', function (event) {
                 text: '施設に関する質問［3件］',
                 actions:[{
                   type: "message",
-                  label: "施設に関する質問",
-                  text: "施設に関する質問"
+                  label: "選択"
                  }]
                },
               ]
