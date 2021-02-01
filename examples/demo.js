@@ -19,7 +19,7 @@ bot.on('message', function (event) {
             altText: 'this is a buttons template',
             template: {
               type: 'buttons',
-              text: '検索の種類を選択して下さい',
+              text: '図書館の資料を検索します。下のメニューより検索の種類を選択して下さい',
               actions: [{
                 type: 'uri',
                 label: '簡単検索',
@@ -28,6 +28,25 @@ bot.on('message', function (event) {
                 type: 'uri',
                 label: '詳細検索',
                 uri: 'https://www.lics-saas.nexs-service.jp/licsdemo/spopac/searchexpert.do'
+              }]
+            }
+          });
+          break;
+        case 'FAQ':
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'buttons',
+              text: 'お客様のご質問にお答えします。下のメニューよりご希望の内容をタップしてください。',
+              actions: [{
+                type: 'message',
+                label: 'よくある質問を見る',
+                text: 'よくある質問を見る'
+              }, {
+                type: 'message',
+                label: 'カテゴリから検索する',
+                text: 'カテゴリから検索する'
               }]
             }
           });
