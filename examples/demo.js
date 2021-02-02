@@ -7,6 +7,19 @@ const bot = linebot({
   verify: true // default=true
 });
 
+
+/*
+アカウント連携demo開始
+*/
+
+event.source.profile().then(function (profile) {
+  event.reply('Hello ' + profile.displayName);
+});
+
+/*
+アカウント連携demo終了
+*/
+
 bot.on('message', function (event) {
   console.log('**demo.js message event in');
   console.log('**%O', event);
