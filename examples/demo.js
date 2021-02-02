@@ -10,13 +10,11 @@ const bot = linebot({
 
 /*
 アカウント連携demo開始
-*/
 
 event.source.profile().then(function (profile) {
   event.reply('Hello ' + profile.displayName);
 });
 
-/*
 アカウント連携demo終了
 */
 
