@@ -16,9 +16,9 @@ bot.on('message', function (event) {
         case 'アカウント連携':
 
           console.log('**userId=', event.source.userId);
-          console.log('**channelAccessToken=', process.env.CHANNEL_ACCESS_TOKEN);
-          const client = new linebot.Client({
-            channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
+          console.log('**channelAccessToken=', event.channelAccessToken);
+          const client = new event.Client({
+            channelAccessToken: event.channelAccessToken
           });
           client.getLinkToken(event.source.userId)
           
