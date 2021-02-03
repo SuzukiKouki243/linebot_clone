@@ -1,5 +1,5 @@
 const linebot = require('../index.js');
-const line = 'https://api.line.me/v2/bot';
+var request = require('request');
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -19,7 +19,13 @@ bot.on('message', function (event) {
           console.log('**userId=', event.source.userId);
           console.log('**channelAccessToken=', event.source.channelAccessToken);
           
-          line.getLinkToken(event.source.userId)
+          var options = {
+  uri: "https://api.line.me/v2/bot/user/U5841b2de7088bb86a7ec29c4cb517be6/linkToken",
+  headers: {
+    "Authorization": "r5iTmDLe9WOD6fn6C8qkjGxhc0JW/YtmKYNf+7bgTBG+AQqsTV7GCx9t1EyYslZwU1Bm1jSSGxOHHI5aM57XcGX2mMFgGKR3HL+aSOWIn1aTpiOhdRB/BVdzMcTydAc9G13430UAft4U21lBflUX2gdB04t89/1O/w1cDnyilFU=",
+  }
+};
+request.post(options, function(error, response, body){});
      
           
           event.reply({
