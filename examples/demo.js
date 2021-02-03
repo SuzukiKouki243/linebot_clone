@@ -3,7 +3,7 @@ var request = require('request');
 var options = {
   uri: "https://api.line.me/v2/bot/user/U5841b2de7088bb86a7ec29c4cb517be6/linkToken",
   headers: {
-    "Authorization": "r5iTmDLe9WOD6fn6C8qkjGxhc0JW/YtmKYNf+7bgTBG+AQqsTV7GCx9t1EyYslZwU1Bm1jSSGxOHHI5aM57XcGX2mMFgGKR3HL+aSOWIn1aTpiOhdRB/BVdzMcTydAc9G13430UAft4U21lBflUX2gdB04t89/1O/w1cDnyilFU=",
+    Authorization: 'Bearer r5iTmDLe9WOD6fn6C8qkjGxhc0JW/YtmKYNf+7bgTBG+AQqsTV7GCx9t1EyYslZwU1Bm1jSSGxOHHI5aM57XcGX2mMFgGKR3HL+aSOWIn1aTpiOhdRB/BVdzMcTydAc9G13430UAft4U21lBflUX2gdB04t89/1O/w1cDnyilFU=,
   }
 };
 
