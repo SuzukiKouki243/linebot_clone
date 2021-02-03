@@ -7,23 +7,36 @@ const bot = linebot({
   verify: true // default=true
 });
 
-
-/*
-アカウント連携demo開始
-
-event.source.profile().then(function (profile) {
-  event.reply('Hello ' + profile.displayName);
-});
-
-アカウント連携demo終了
-*/
-
 bot.on('message', function (event) {
   console.log('**demo.js message event in');
   console.log('**%O', event);
   switch (event.message.type) {
     case 'text':
       switch (event.message.text) {
+        case 'アカウント連携':
+
+          console.log('userId=', event.source.profile.userId);
+          console.log('userId=', event.source.userId);
+          bot.getLinkToken(event.source.profile.userId)
+          
+          event.reply({
+            type: 'template',
+            altText: 'this is a buttons template',
+            template: {
+              type: 'buttons',
+              text: '図書館の資料を検索します。下のメニューより検索の種類を選択して下さい',
+              actions: [{
+                type: 'uri',
+                label: '簡単検索',
+                uri: 'https://www.lics-saas.nexs-service.jp/licsdemo/spopac/index.do'
+              }, {
+                type: 'uri',
+                label: '詳細検索',
+                uri: 'https://www.lics-saas.nexs-service.jp/licsdemo/spopac/searchexpert.do'
+              }]
+            }
+          });
+          break;
         case '資料検索':
           event.reply({
             type: 'template',
