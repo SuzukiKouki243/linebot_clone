@@ -13,7 +13,7 @@ bot.on('message', function (event) {
   switch (event.message.type) {
     case 'text':
       switch (event.message.text) {
-        case 'アカウント連携':
+        /* case 'アカウント連携':
 
           console.log('**userId=', event.source.userId);
           console.log('**channelAccessToken=', event.source.channelAccessToken);
@@ -35,7 +35,7 @@ bot.on('message', function (event) {
               }]
             }
           });
-          break;
+          break; */
         case '資料検索':
           event.reply({
             type: 'template',
