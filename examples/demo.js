@@ -16,9 +16,9 @@ bot.on('message', function (event) {
         case 'アカウント連携':
 
           console.log('**userId=', event.source.userId);
-          console.log('**channelAccessToken=', event.channelAccessToken);
+          console.log('**channelAccessToken=', event.source.channelAccessToken);
           const client = new event.Client({
-            channelAccessToken: event.channelAccessToken
+            channelAccessToken: event.source.channelAccessToken
           });
           client.getLinkToken(event.source.userId)
           
