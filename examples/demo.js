@@ -18,7 +18,9 @@ bot.on('message', function (event) {
           console.log('**userId=', event.source.userId);
           console.log('**channelAccessToken=', event.source.channelAccessToken);
           
-          const line = require('@line/bot-sdk');
+          const client = new linebot.Client({
+  channelAccessToken: '<channel access token>'
+});
      
           
           event.reply({
