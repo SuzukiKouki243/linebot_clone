@@ -15,7 +15,6 @@ bot.on('message', function (event) {
       switch (event.message.text) {
         case 'アカウント連携':
 
-          console.log('userId=', event.source.profile.userId);
           console.log('userId=', event.source.userId);
           bot.getLinkToken(event.source.profile.userId)
           
