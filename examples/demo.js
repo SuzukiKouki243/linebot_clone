@@ -19,15 +19,7 @@ bot.on('message', function (event) {
           console.log('**channelAccessToken=', event.source.channelAccessToken);
           
           const line = require('@line/bot-sdk');
-          const client = new line.Client({
-             channelAccessToken: '<channel access token>'
-          });
-          client.getLinkToken(event.source.userId)
-          
-          const client = new event.Client({
-            channelAccessToken: event.source.channelAccessToken
-          });
-          client.getLinkToken(event.source.userId)
+     
           
           event.reply({
             type: 'template',
