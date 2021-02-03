@@ -19,9 +19,7 @@ bot.on('message', function (event) {
           console.log('**userId=', event.source.userId);
           console.log('**channelAccessToken=', event.source.channelAccessToken);
           
-          const client = new line.Client({
-              channelAccessToken: 'r5iTmDLe9WOD6fn6C8qkjGxhc0JW/YtmKYNf+7bgTBG+AQqsTV7GCx9t1EyYslZwU1Bm1jSSGxOHHI5aM57XcGX2mMFgGKR3HL+aSOWIn1aTpiOhdRB/BVdzMcTydAc9G13430UAft4U21lBflUX2gdB04t89/1O/w1cDnyilFU='
-           });
+          line.getLinkToken(event.source.userId)
      
           
           event.reply({
