@@ -7,8 +7,6 @@ const bot = linebot({
   verify: true // default=true
 });
 
-const linebotsdk = require('https://github.com/line/line-bot-sdk-nodejs/blob/next/lib/client.ts');
-
 bot.on('message', function (event) {
   console.log('**demo.js message event in');
   console.log('**%O', event);
