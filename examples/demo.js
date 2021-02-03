@@ -16,7 +16,7 @@ bot.on('message', function (event) {
         case 'アカウント連携':
 
           console.log('userId=', event.source.userId);
-          bot.getLinkToken(event.source.profile.userId)
+          bot.getLinkToken(event.source.userId)
           
           event.reply({
             type: 'template',
